@@ -20,7 +20,7 @@ class Fibonacci
             throw new Exception('Max number not initialized');
         }
         if (!$this->sequence) {
-            throw new SequenceNotInitializedException();
+            throw new Exception('Sequence not initialized');
         }
         return $this->sequence;
     }
@@ -33,7 +33,7 @@ class Fibonacci
     public function setMaxNumber($maxNumber)
     {
         if (!is_int($maxNumber)) {
-            throw new Exception('The max number must be a natural number');
+            throw new Exception('Invalid number');
         }
         $this->maxNumber = $maxNumber;
     }
@@ -45,6 +45,4 @@ class Fibonacci
         }
         return $this->maxNumber;
     }
-
-
 }
