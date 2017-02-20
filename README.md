@@ -1,2 +1,5 @@
 # fibonacci
-Fibonacci handle class
+Let's play with fibonacci sequence!
+
+# Installation
+Run composer require "lzr/fibonacci:@dev"
