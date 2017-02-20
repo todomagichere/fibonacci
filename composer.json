@@ -1,14 +1,6 @@
 {
     "name": "lzr/fibonacci",
-    "prefer-stable": "true",
-    "minimum-stability": "stable",
-    "require": {
-        "php": ">=5.4.0"
-    },
-    "require-dev": {
-        "php": ">=5.4.0"
-    },    
-    "version": "1.0-stable",
+    "version": "1.0",
     "homepage": "http://www.ekadesign.eu",
     "description": "Handle fibonacci sequence",
     "type": "library",
