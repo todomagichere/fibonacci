@@ -1,10 +1,10 @@
 {
     "name": "lzr/fibonacci",
-    "version": "1.0",
-    "homepage": "http://www.ekadesign.eu",
     "description": "Handle fibonacci sequence",
+    "version": "1.0.0",    
     "type": "library",
     "keywords": ["sequence", "fibonacci", "lzr", "computational", "complexity"],
+    "homepage": "http://www.ekadesign.eu",
     "license": "MIT",
     "authors": [
         {
@@ -13,6 +13,9 @@
             "homepage": "http://www.ekadesign.eu"
         }
     ],
+    "support" : {
+        "email": "roberto.perez@ekadesign.eu"
+    },
     "autoload": {
         "classmap": [
             "Fibonacci.php"
