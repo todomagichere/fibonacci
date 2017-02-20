@@ -41,9 +41,11 @@ class Fibonacci
         return $this->maxNumber;
     }
 
-    public function checkNumber()
+    public function checkNumber($n)
     {
-        //TODO magic here
+        if ($n < 0) {
+            throw new Exception($n . ' is not a valid index');
+        }
     }
 
     /**
@@ -107,15 +109,13 @@ class Fibonacci
      * using a determinate computational complexity
      *
      * @param integer $n nth element to get
-     * @param string $complexity ['logarithmic' | 'linear' | 'exponential']
+     * @param string $complexity Values can be: 'logarithmic', 'linear' or 'exponential'
      * @return integer
      * @throws Exception If complexity is not defined, throw an exception
      */
     public function getElement($n, $complexity = 'logarithmic')
     {
-        if ($n < 0) {
-            throw new Exception($n . ' is not a valid index');
-        }
+        $this->checkNumber($n);
 
         switch ($complexity) {
             case 'logarithmic':
