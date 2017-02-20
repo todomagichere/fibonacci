@@ -1,20 +1,21 @@
 {
     "name": "lzr/fibonacci",
-    "description": "Class for handle fibonacci sequence",
-    "homepage": "https://github.com/todomagichere/fibonacci",
-    "require": {
-        "php": ">=5.3.3 || ^7.0"
-    },
+    "version": "0.0.1",
+    "homepage": "http://www.fpdf.org",
+    "description": "Handle fibonacci sequence",
+    "type": "library",
+    "keywords": ["sequence", "fibonacci", "lzr"],
+    "license": "MIT",
     "authors": [
         {
-            "name": "lzr team",
-            "homepage": "http://google.com"
+            "name": "Roberto Pérez",
+            "email": "roberto.perez@ekadesign.eu",
+            "homepage": "http://ekadesign.eu"
         }
     ],
-    "autoload" : {
-        "psr-0" : {
-            "Lzr\\Fibonacci" : ""
-        }
-    },
-    "target-dir" : "Lzr/Fibonacci"    
+    "autoload": {
+        "classmap": [
+            "Fibonacci.php"
+        ]
+    }
 }
