@@ -2,7 +2,7 @@
 
 namespace Lzr\Fibonacci;
 
-use Lzr\Fibonacci\SequenceNotInicialicedException;
+use Exception;
 
 class Fibonacci
 {
