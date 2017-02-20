@@ -1,6 +1,6 @@
 <?php
 
-namespace Lzr\Fibonnacci;
+namespace Lzr\Fibonacci;
 
 use \Exception;
 
