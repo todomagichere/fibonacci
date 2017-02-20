@@ -1,7 +1,7 @@
 {
     "name": "lzr/fibonacci",
     "version": "0.0.1",
-    "minimum-stability": "dev"    
+    "minimum-stability": "dev",    
     "homepage": "http://www.ekadesign.eu",
     "description": "Handle fibonacci sequence",
     "type": "library",
