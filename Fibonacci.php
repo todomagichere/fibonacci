@@ -7,44 +7,18 @@ use Exception;
 class Fibonacci
 {
     private $index = null;
-    private $sequence = array(1);
 
     public function __construct($index = null)
     {
-        $this->index = $index;
         $this->checkNumber($index);
-    }
-
-    public function getSequence()
-    {
-        //TODO magic here
-    }
-
-    public function initSequence()
-    {
-        $this->sequence = true;
-    }
-
-    public function setMaxNumber($index)
-    {
-        if (!is_int($index)) {
-            throw new Exception('Invalid number');
-        }
         $this->index = $index;
-    }
-
-    public function getMaxNumber()
-    {
-        if (is_null($this->index)) {
-            throw new Exception('Max number not initialized');
-        }
-        return $this->index;
     }
 
     /**
      * Check if is a valid number
-     * @param int $n
-     * @throws Exception Throws an exception if is not a valid number
+     *
+     * @param int $n Index to get from fibonacci sequence
+     * @throws Exception if is not a valid number
      */
     public function checkNumber($n)
     {
@@ -54,7 +28,10 @@ class Fibonacci
     }
 
     /**
-     * Get the nth element using exponential complexity
+     * Get the nth fibonacci number using exponential complexity.
+     * This is a very low algorithm, probably a
+     * max execution time error exception will be thrown.
+     *
      * @param int $n
      * @return int
      */
@@ -68,7 +45,8 @@ class Fibonacci
     }
 
     /**
-     * Get the nth element using linear complexity
+     * Get the nth fibonacci number using linear complexity
+     *
      * @param int $n
      * @return int
      */
@@ -86,7 +64,8 @@ class Fibonacci
     }
 
     /**
-     * Get the nth element using logarithmic complexity
+     * Get the nth fibonacci number using logarithmic complexity
+     *
      * @param int $n
      * @return int
      */
@@ -133,13 +112,17 @@ class Fibonacci
 
         switch ($complexity) {
             case 'logarithmic':
-                return $this->getElementLogarithmicComplexity($n);
+                $element = $this->getElementLogarithmicComplexity($n);
+                break;
             case 'exponential':
-                return $this->getElementExponentialComplexity($n);
+                $element = $this->getElementExponentialComplexity($n);
+                break;
             case 'linear':
-                return $this->getElementLinearComplexity($n);
+                $element = $this->getElementLinearComplexity($n);
+                break;
             default:
                 throw new Exception('complexity not defined');
         }
+        return $element;
     }
 }
