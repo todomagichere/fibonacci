@@ -1,0 +1,20 @@
+{
+    "name": "lzr/fibonacci",
+    "description": "Class for handle fibonacci sequence",
+    "homepage": "https://github.com/todomagichere/fibonacci",
+    "require": {
+        "php": ">=5.3.3 || ^7.0"
+    },
+    "authors": [
+        {
+            "name": "lzr team",
+            "homepage": "http://google.com"
+        }
+    ],
+    "autoload" : {
+        "psr-0" : {
+            "Lzr\\Fibonacci" : ""
+        }
+    },
+    "target-dir" : "Lzr/Fibonacci"    
+}
