@@ -8,7 +8,7 @@
     "require-dev": {
         "php": ">=5.4.0"
     },    
-    "version": "1.0",
+    "version": "1.0-stable",
     "homepage": "http://www.ekadesign.eu",
     "description": "Handle fibonacci sequence",
     "type": "library",
