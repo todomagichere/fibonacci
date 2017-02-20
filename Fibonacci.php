@@ -41,7 +41,7 @@ class Fibonacci
     public function getMaxNumber()
     {
         if (is_null($this->maxNumber)) {
-            throw new MaxNumberNotInitializedException();
+            throw new Exception('Max number not initialized');
         }
         return $this->maxNumber;
     }
