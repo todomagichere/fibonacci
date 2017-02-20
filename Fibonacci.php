@@ -4,10 +4,17 @@ namespace Lzr\Fibonacci;
 
 use Exception;
 
+/**
+ * This class handle the fibonacci sequence
+ * to make maths and software development more fun
+ */
 class Fibonacci
 {
     private $index = null;
 
+    /**
+     * @param int $index index of nth number of fibonacci sequence
+     */
     public function __construct($index = null)
     {
         $this->checkNumber($index);
@@ -32,8 +39,8 @@ class Fibonacci
      * This is a very low algorithm, probably a
      * max execution time error exception will be thrown.
      *
-     * @param int $n
-     * @return int
+     * @param int $n index of fibonacci number sequence
+     * @return int element in the nth position
      */
     private function getElementExponentialComplexity($n)
     {
@@ -47,8 +54,8 @@ class Fibonacci
     /**
      * Get the nth fibonacci number using linear complexity
      *
-     * @param int $n
-     * @return int
+     * @param int $n index of fibonacci number sequence
+     * @return int elementin the nth position
      */
     private function getElementLinearComplexity($n)
     {
@@ -66,8 +73,8 @@ class Fibonacci
     /**
      * Get the nth fibonacci number using logarithmic complexity
      *
-     * @param int $n
-     * @return int
+     * @param int $n index of fibonacci number sequence
+     * @return int element in the nth position
      */
     private function getElementLogarithmicComplexity($n)
     {
@@ -103,7 +110,7 @@ class Fibonacci
      *
      * @param int $n nth element to get
      * @param string $complexity Values can be: 'logarithmic', 'linear' or 'exponential'
-     * @return int
+     * @return int element
      * @throws Exception If complexity is not defined, throw an exception
      */
     public function getElementByIndex($n, $complexity = 'logarithmic')
