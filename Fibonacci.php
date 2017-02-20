@@ -6,13 +6,13 @@ use Exception;
 
 class Fibonacci
 {
-    private $maxNumber = null;
+    private $index = null;
     private $sequence = array(1);
 
-    public function __construct($maxNumber = null)
+    public function __construct($index = null)
     {
-        $this->maxNumber = $maxNumber;
-        $this->checkNumber();
+        $this->index = $index;
+        $this->checkNumber($index);
     }
 
     public function getSequence()
@@ -25,22 +25,27 @@ class Fibonacci
         $this->sequence = true;
     }
 
-    public function setMaxNumber($maxNumber)
+    public function setMaxNumber($index)
     {
-        if (!is_int($maxNumber)) {
+        if (!is_int($index)) {
             throw new Exception('Invalid number');
         }
-        $this->maxNumber = $maxNumber;
+        $this->index = $index;
     }
 
     public function getMaxNumber()
     {
-        if (is_null($this->maxNumber)) {
+        if (is_null($this->index)) {
             throw new Exception('Max number not initialized');
         }
-        return $this->maxNumber;
+        return $this->index;
     }
 
+    /**
+     * Check if is a valid number
+     * @param int $n
+     * @throws Exception Throws an exception if is not a valid number
+     */
     public function checkNumber($n)
     {
         if ($n < 0) {
@@ -49,10 +54,9 @@ class Fibonacci
     }
 
     /**
-     * Get the nth Fibonacci number O(Fi^n)
-     * @param integer $n
-     * @return integer
-     * @throws Exception
+     * Get the nth element using exponential complexity
+     * @param int $n
+     * @return int
      */
     private function getElementExponentialComplexity($n)
     {
@@ -63,6 +67,11 @@ class Fibonacci
         }
     }
 
+    /**
+     * Get the nth element using linear complexity
+     * @param int $n
+     * @return int
+     */
     private function getElementLinearComplexity($n)
     {
         $i = 1;
@@ -76,6 +85,11 @@ class Fibonacci
         return $j;
     }
 
+    /**
+     * Get the nth element using logarithmic complexity
+     * @param int $n
+     * @return int
+     */
     private function getElementLogarithmicComplexity($n)
     {
         if ($n <= 0) {
@@ -108,12 +122,12 @@ class Fibonacci
      * Get the nth fibonacci number
      * using a determinate computational complexity
      *
-     * @param integer $n nth element to get
+     * @param int $n nth element to get
      * @param string $complexity Values can be: 'logarithmic', 'linear' or 'exponential'
-     * @return integer
+     * @return int
      * @throws Exception If complexity is not defined, throw an exception
      */
-    public function getElement($n, $complexity = 'logarithmic')
+    public function getElementByIndex($n, $complexity = 'logarithmic')
     {
         $this->checkNumber($n);
 
