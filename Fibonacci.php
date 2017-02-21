@@ -137,6 +137,6 @@ class Fibonacci
                 throw new Exception('complexity not defined');
         }
         
-        return $element;
+        return number_format($element, 0);
     }
 }
