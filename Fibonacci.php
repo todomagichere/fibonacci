@@ -61,6 +61,7 @@ class Fibonacci
     {
         $i = 1;
         $j = 0;
+        
         $counter = $n - 1;
         for ($k = 0; $k <= $counter; $k++) {
             $t = $i + $j;
@@ -81,20 +82,25 @@ class Fibonacci
         if ($n <= 0) {
             return 0;
         }
+        
         $i = $n - 1;
         $auxOne = 0;
         $auxTwo = 1;
+        
         $a = $auxTwo;
         $b = $auxOne;
         $c = $auxOne;
         $d = $auxTwo;
+        
         while ($i > 0) {
+            
             if ($i % 2 != 0) {
                 $auxOne = (($d*$b) + ($c*$a));
                 $auxTwo = ($d*($b + $a) + $c*$b);
                 $a = $auxOne;
                 $b = $auxTwo;
             }
+            
             $auxOne = (pow($c, 2) + pow($d, 2));
             $auxTwo = ($d*(2*$c + $d));
             $c = $auxOne;
@@ -130,6 +136,7 @@ class Fibonacci
             default:
                 throw new Exception('complexity not defined');
         }
+        
         return $element;
     }
 }
