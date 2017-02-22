@@ -20,5 +20,6 @@
         "classmap": [
             "Fibonacci.php"
         ]
-    }
+    },
+    "minimum-stability": "dev"
 }
