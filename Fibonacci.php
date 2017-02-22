@@ -94,18 +94,21 @@ class Fibonacci
         $i = $n - 1;
         $auxOne = 0;
         $auxTwo = 1;
+        
         $a = $auxTwo;
         $b = $auxOne;
         $c = $auxOne;
         $d = $auxTwo;
 
         while ($i > 0) {
+            
             if ($i % 2 != 0) {
                 $auxOne = (($d*$b) + ($c*$a));
                 $auxTwo = ($d*($b + $a) + $c*$b);
                 $a = $auxOne;
                 $b = $auxTwo;
             }
+            
             $auxOne = (pow($c, 2) + pow($d, 2));
             $auxTwo = ($d*(2*$c + $d));
             $c = $auxOne;

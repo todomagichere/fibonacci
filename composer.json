@@ -1,6 +1,6 @@
 {
     "name": "lzr/fibonacci",
-    "description": "Handle fibonacci sequence",
+    "description": "Fibonacci sequence lab",
     "version": "dev-master",    
     "type": "library",
     "keywords": ["sequence", "fibonacci", "lzr", "computational", "complexity"],
@@ -20,5 +20,11 @@
         "classmap": [
             "Fibonacci.php"
         ]
-    }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.3-dev"
+        }
+    },    
+    "minimum-stability": "dev"
 }
