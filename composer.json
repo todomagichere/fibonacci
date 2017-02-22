@@ -21,5 +21,10 @@
             "Fibonacci.php"
         ]
     },
+    "extra": {
+        "branch-alias": {
+            "dev-master": ""
+        }
+    },    
     "minimum-stability": "dev"
 }
