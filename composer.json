@@ -1,6 +1,6 @@
 {
     "name": "lzr/fibonacci",
-    "description": "Handle fibonacci sequence",
+    "description": "Fibonacci sequence lab",
     "version": "dev-master",    
     "type": "library",
     "keywords": ["sequence", "fibonacci", "lzr", "computational", "complexity"],
