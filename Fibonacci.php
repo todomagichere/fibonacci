@@ -10,17 +10,6 @@ use Exception;
  */
 class Fibonacci
 {
-    private $index = null;
-
-    /**
-     * @param int $index index of nth number of fibonacci sequence
-     */
-    public function __construct($index = null)
-    {
-        $this->checkNumber($index);
-        $this->index = $index;
-    }
-
     /**
      * Check if is a valid number
      *
@@ -29,9 +18,27 @@ class Fibonacci
      */
     public function checkNumber($n)
     {
-        if ($n < 0) {
-            throw new Exception($n . ' is not a valid index');
+        if (!is_numeric($n)) {
+            throw new Exception($n . "is not a valid number");
         }
+        
+        if ($n < 0) {
+            throw new Exception($n . " is not a valid index");
+        }
+    }
+
+    public function getSequence($n)
+    {
+        $this->checkNumber($n);
+
+        $sequence = array(0,1);
+        for ($i = 1; $i < $n; $i++) {
+            $sequence[] = $sequence[$i] + $sequence[$i-1];
+        }
+
+        echo "<pre>";
+        print_r($sequence);
+        echo "</pre>";
     }
 
     /**
@@ -61,12 +68,14 @@ class Fibonacci
     {
         $i = 1;
         $j = 0;
+
         $counter = $n - 1;
         for ($k = 0; $k <= $counter; $k++) {
             $t = $i + $j;
             $j = $i;
             $i = $t;
         }
+        
         return $j;
     }
 
@@ -81,6 +90,7 @@ class Fibonacci
         if ($n <= 0) {
             return 0;
         }
+
         $i = $n - 1;
         $auxOne = 0;
         $auxTwo = 1;
@@ -88,6 +98,7 @@ class Fibonacci
         $b = $auxOne;
         $c = $auxOne;
         $d = $auxTwo;
+
         while ($i > 0) {
             if ($i % 2 != 0) {
                 $auxOne = (($d*$b) + ($c*$a));
@@ -101,6 +112,7 @@ class Fibonacci
             $d = $auxTwo;
             $i = $i / 2;
         }
+        
         return ($a + $b);
     }
 
@@ -130,6 +142,7 @@ class Fibonacci
             default:
                 throw new Exception('complexity not defined');
         }
+        
         return $element;
     }
 }
