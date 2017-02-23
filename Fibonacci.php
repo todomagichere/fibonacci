@@ -27,18 +27,25 @@ class Fibonacci
         }
     }
 
+
     public function getSequence($n)
     {
         $this->checkNumber($n);
 
-        $sequence = array(0,1);
+        if($n == 0) {
+            return array(0);
+        }
+
+        if($n == 1) {
+            return array(0, 1);
+        }
+
+        $sequence = array(0, 1);
         for ($i = 1; $i < $n; $i++) {
             $sequence[] = $sequence[$i] + $sequence[$i-1];
         }
 
-        echo "<pre>";
-        print_r($sequence);
-        echo "</pre>";
+        return $sequence;
     }
 
     /**
@@ -149,3 +156,6 @@ class Fibonacci
         return $element;
     }
 }
+
+$f = new Fibonacci();
+print_r($f->getSequence(1));
