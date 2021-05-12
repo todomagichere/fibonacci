@@ -1,7 +1,7 @@
 {
     "name": "lzr/fibonacci",
     "description": "Fibonacci sequence lab",
-    "version": "dev-master",    
+    "version": "1.0.0",    
     "type": "library",
     "keywords": ["sequence", "fibonacci", "lzr", "computational", "complexity"],
     "homepage": "http://www.ekadesign.eu",
