@@ -157,5 +157,3 @@ class Fibonacci
     }
 }
 
-$f = new Fibonacci();
-print_r($f->getSequence(1));
