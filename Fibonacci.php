@@ -1,6 +1,6 @@
 <?php
 
-namespace Lzr\Fibonacci;
+namespace TodoMagicHere\Fibonacci;
 
 use Exception;
 
