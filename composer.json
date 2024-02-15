@@ -1,20 +1,20 @@
 {
-    "name": "lzr/fibonacci",
+    "name": "todomagichere/fibonacci",
     "description": "Fibonacci sequence lab",
     "version": "v1.1.0",    
     "type": "library",
-    "keywords": ["sequence", "fibonacci", "lzr", "computational", "complexity"],
-    "homepage": "http://www.ekadesign.eu",
+    "keywords": ["sequence", "fibonacci", "lzr", "computational", "complexity", "todomagichere"],
+    "homepage": "https://infinitumdigital.net/",
     "license": "MIT",
     "authors": [
         {
             "name": "Roberto Pérez",
-            "email": "roberto.perez@ekadesign.eu",
-            "homepage": "http://www.ekadesign.eu"
+            "email": "rperez@infinitumdigital.net",
+            "homepage": "https://infinitumdigital.net/"
         }
     ],
     "support" : {
-        "email": "roberto.perez@ekadesign.eu"
+        "email": "rperez@infinitumdigital.net"
     },
     "autoload": {
         "classmap": [
